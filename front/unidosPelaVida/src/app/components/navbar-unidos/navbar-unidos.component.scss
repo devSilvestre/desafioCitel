@@ -1,0 +1,16 @@
+//comum
+.img-logo{
+    height:64px;
+    object-fit:cover;
+  }
+
+//desktop
+@media (min-width:746px) {
+
+  nav {
+    padding-left: 32px;
+    padding-right: 64px;
+    font-size: 1.25rem;
+  }
+  
+}
