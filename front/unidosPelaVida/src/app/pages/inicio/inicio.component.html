@@ -1,5 +1,63 @@
 
 <div class="container-fluid">
-
+    <div class="row mx-3 mb-3" *ngIf="!visualizar">
+        <div style="height: 50vh;">
+            <div class="position-relative top-50 start-50 translate-middle text-center">
+                <img class="img-rounded" alt="faça upload" src="assets/imgs/empty-home.jpeg" width="200">
+                <br/>
+                Estamos sem dados no nosso banco, por favor, acesse a pagina de "Upload"
+            </div>
+        </div>
+    </div>
+    <div class="row my-4" *ngIf="visualizar">
+        <div class="card-group col col-md-6 col-sm-12">
+            <div class="card">
+                <div class="card-body">
+                    <div echarts [options]="graficoCandidatosRegiao"></div>
+                    <div class="col-md-3 col-sm-6 d-flex pt-sm-2">
+                        <select class="form-select" [(ngModel)]="regiao" (change)="buscarPorRegiao()">
+                          <option [ngValue]="'sudeste'">sudeste</option>
+                          <option [ngValue]="'norte'">norte</option>
+                          <option [ngValue]="'nordeste'">nordeste</option>
+                          <option [ngValue]="'sul'">sul</option>
+                          <option [ngValue]="'centro-oeste'">centro-oeste</option>
+                          <option [ngValue]="'todas regiões'">todas regiões</option>
+                        </select>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-group col col-md-6 col-sm-12">
+            <div class="card">
+                <div class="card-body justify-content-center">
+                    <div echarts [options]="graficoPorObesidade"></div>
+                </div>
+            </div>
+        </div>
+        <div class="card-group col col-md-6 col-sm-12">
+            <div class="card">
+                <div class="card-body justify-content-center">
+                    <div echarts [options]="graficoImcPorFaixaEtaria"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-group col col-md-6 col-sm-12">
+            <div class="card">
+                <div class="card-body justify-content-center">
+                    <div echarts [options]="graficoPorMediaIdadeTipoSangue"></div>
+                </div>
+            </div>
+        </div>
+        <div class="card-group col col-md-6 col-sm-12">
+            <div class="card">
+                <div class="card-body justify-content-center">
+                    <div echarts [options]="graficoPorReceptorPorTipoSangue"></div>
+                </div>
+                <small class="text-center mb-2"><i class="fa-solid fa-triangle-exclamation color-warning"></i> * ATENÇÃO: Somente pessoas com idade de 16 a 69 anos e com peso acima de 50 Kg podem doar sangue. </small>
+            </div>
+        </div>
+    </div>
+    
 </div>
   

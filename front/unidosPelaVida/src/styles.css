@@ -1,1 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+
+body {
+    background-color: #F5F5F5 !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar-light{
+    border-bottom: 2px solid black;
+    box-shadow:  0px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+footer{
+    border-top: 1px solid black;
+    box-shadow:  0px -1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.img-rounded{
+    border-radius: 100% !important;
+}
+
+.color-warning{
+    color: var(--bs-orange);
+}
+
+small{
+    color: rgb(100, 100, 100);
+    font-size: 0.8rem;
+}

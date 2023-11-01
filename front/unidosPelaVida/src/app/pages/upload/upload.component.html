@@ -1,0 +1,48 @@
+<div class="container-fluid">
+    <div class="row my-4">
+        <div class="card-group col col-md-4 col-sm-12">
+            <div class="card">
+                <div class="card-body m-2">
+                    <div class="position-relative top-50 start-50 translate-middle text-center">
+                    <form>
+                        <input type="file" accept=".json" (change)="onFileSelected($event)">
+                        <button class="btn btn-warning ms-2 enviar" type="button" (click)="enviar()">Enviar</button>
+                    </form>
+                    <small>(Arquivo tipo: Json)</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card-group col col-md-8 col-sm-12">
+            <div class="card">
+                <div class="card-body m-2">
+                    <div class="row mx-3 mb-3" *ngIf="resultado.length == 0">
+                        <div style="height: 50vh;">
+                            <div class="position-relative top-50 start-50 translate-middle text-center">
+                                <img class="img-rounded" alt="faça upload" src="assets/imgs/empty-list.jpeg" width="200">
+                                <br/>
+                                Nenhum arquivo gerado...
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mx-3 mb-3" *ngIf="resultado.length > 0">
+                        <div style="height: 50vh;">
+                            <div class="alert alert-success" role="alert">
+                                {{resultado[0]}}
+                            </div>
+                            <div class="alert alert-warning" role="alert">
+                                {{resultado[1]}}
+                            </div>
+                            <div class="alert alert-danger" role="alert">
+                                {{resultado[2]}}
+                            </div>
+                            <div class="alert alert-danger" role="alert" *ngFor="let erros of resultado[3]">
+                                teste
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

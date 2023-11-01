@@ -1,0 +1,17 @@
+.card{
+    box-shadow: 0px 0px 2px black;
+}
+
+.card:not(:first-child){
+    margin-top: 0.5rem !important;
+}
+
+.card:last-child{
+    margin-bottom: 0.5rem !important;
+}
+@media (max-width: 767px) {
+    .enviar{
+        margin-top: 32px;
+        float: right;
+    }
+}

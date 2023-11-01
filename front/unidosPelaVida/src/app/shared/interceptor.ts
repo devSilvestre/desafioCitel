@@ -53,7 +53,7 @@ export class AuthInterceptorService implements HttpInterceptor {
         }), finalize(() => {
             clearInterval(this.interval);
             if (this.emLoad) {
-                this.interval = setTimeout(() => { Swal.close(); this.emLoad = false }, 5000);
+                this.interval = setTimeout(() => { Swal.close(); this.emLoad = false }, 3000);
             }
         }));
     }

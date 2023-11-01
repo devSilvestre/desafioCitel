@@ -1,21 +1,20 @@
-<nav class="navbar navbar-expand-lg navbar navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
 
-    <a routerLink="/inicio"><img class="img-logo" alt="unidos Início" src="assets/imgs/unidos.jpeg"></a>
+    <a class="navbar-brand me-5" routerLink="/inicio"><img class="img-logo" alt="unidos Início" src="assets/imgs/unidos.jpeg">
+      Unidos Pela Vida
+    </a>
 
-    <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2" id="navbarText">
-
-      <ul class="navbar-nav mr-auto ms-3">
-        <li class="nav-item">
-          Unidos Pela Vida
-        </li>
-      </ul>
-    </div>
-
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
-      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav ms-5">
+        <a class="nav-link" aria-current="page" routerLinkActive="active" routerLink="/inicio"> Início</a>
+        <a class="nav-link" aria-current="page" routerLinkActive="active" routerLink="/upload"> Upload</a>
+      </div>
+    </div>
+    
   </div>
 </nav>
